@@ -14,24 +14,17 @@
     <div class="slide-out-content">
       <form>
         <div class="field">
-          <label>First Name: {{first}}</label>
-          <input type="text" value={{first}} placeholder="First Name" oninput={{action "changeFirst" value="target.value"}}>
+          <label>First Name: {{model.first}}</label>
+          {{input type="text" placeholder="First Name" value=model.first}}
+        </div>
+
+        <div class="field">
+          <label>Last Name: {{model.last}}</label>
+          {{input type="text" placeholder="First Name" value=model.last}}
         </div>
       </form>
 
-      <form>
-        <div class="field">
-          <label>Last Name: {{last}}</label>
-          <input type="text" value={{last}} placeholder="Last Name" oninput={{action (mut last) value="target.value"}}>
-        </div>
-      </form>
 
-      <form>
-        <div class="field">
-          <label>Last Name: {{last}}</label>
-          {{input type="text" placeholder="Last Name" value=last}}
-        </div>
-      </form>
     </div>
   </div>
 </div>
