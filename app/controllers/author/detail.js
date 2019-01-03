@@ -2,9 +2,10 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    deleteAuthor(author){
-      console.log(author);
-      window.alert('Delete Author');
+    deleteAuthor(author) {
+      author.destroyRecord().then(() => {
+        this.transitionToRoute('author.index');
+      });
     }
   }
 });
