@@ -1,15 +1,15 @@
 <div class="app">
   <nav class="main-nav">
     <h1 class="logo">
-      <a href>
+      {{#link-to "index"}}
         <img src="/logo.svg" alt="Ember Library">
-        <span class="sr-only"></span>
-      </a>
+        <span class="sr-only">Ember Library</span>
+      {{/link-to}}
     </h1>
 
     <ul>
-      <li><a href></a>Authors</li>
-      <li><a href></a>Books</li>
+      <li>{{#link-to "author"}}Authors{{/link-to}}</li>
+      <li><a href>Books</a></li>
     </ul>
   </nav>
 
