@@ -14,10 +14,10 @@
   <ul class="collection">
     {{#each model as |book|}}
       <li>
-        <a>
+        {{#link-to "book.detail" book.id}}
           <span class="book-title">{{book.title}}</span>
           <em class="book-isbn">{{book.isbn}}</em>
-        </a>
+        {{/link-to}}
       </li>
     {{/each}}
   </ul>
