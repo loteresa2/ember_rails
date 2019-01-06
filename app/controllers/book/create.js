@@ -5,10 +5,10 @@ export default Controller.extend({
     searchAuthor(query){
       return this.store.query('author', {filter: { query } });
     },
-    saveBook(ev){
-      ev.preventDefault();
 
-      const book = this.store.createRecord('book', this.model);
+    saveBook(attrs){
+
+      const book = this.store.createRecord('book', attrs);
 
       book.save()
         .then(() => {
