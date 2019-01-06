@@ -18,6 +18,8 @@ export default Component.extend({
       let author = this.get('store').createRecord('author', this.author);
       author.save().then(() => {
         this.set('showModal', false);
+
+        this.onsave(author);
       });
     }
   }
