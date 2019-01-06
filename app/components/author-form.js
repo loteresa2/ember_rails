@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  didRecieveAttrs(){
+  didReceiveAttrs(){
     this._super(...arguments);
 
     this.setProperties({
