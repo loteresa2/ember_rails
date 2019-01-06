@@ -7,5 +7,8 @@ export default function(){
   //     this.reverse('toRight')
   //   );
 
-  this.transition(this.use('fade'));
+  this.transition(
+    this.hasClass('modal-if'),
+    this.use('fade', {duration: 600})
+  );
 }
