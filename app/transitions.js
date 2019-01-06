@@ -11,4 +11,10 @@ export default function(){
     this.hasClass('modal-if'),
     this.use('fade', {duration: 600})
   );
+
+  this.transition(
+    this.fromRoute('book.detail.index'),
+    this.use('toLeft', {duration: 600}),
+    this.reverse('toRight')
+  );
 }
