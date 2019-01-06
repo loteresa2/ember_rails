@@ -12,7 +12,6 @@
 
         <div class="actions">
           {{#link-to "book.edit" model.id class="btn-pop" }} edit {{/link-to}}
-          <a class="button-popup">edit</a>
           <button class="btn-recessed" onclick={{action "destroy"}}>delete</button>
         </div>
       </div>
@@ -26,7 +25,7 @@
         </p>
         <p>
           <strong>Publish Date:</strong>
-          {{model.publishDate}}
+          {{moment-format model.publishDate "MMMM Do YYYY"}}
         </p>
         <p>
           <strong>ISBN:</strong>
